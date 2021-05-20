@@ -1,38 +1,81 @@
 .App {
+  background-color: aquamarine;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#clock {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 5px solid rgb(119, 86, 43);
+  background-color: tan;
+}
+
+#hourHand {
+  position: absolute;
+  height: 150px;
+  width: 10px;
+  background-color: black;
+  margin: 100px 0 0 245px;
+  border-radius: 3px;
+  transform-origin: bottom;
+  z-index: 1;
+}
+
+#minuteHand {
+  position: absolute;
+  height: 225px;
+  width: 8px;
+  background-color: rgb(98, 98, 98);
+  transform-origin: bottom;
+  border-radius: 3px;
+  margin: 25px 0 0 246px;
+  z-index: 2;
+}
+
+#secondHand {
+  position: absolute;
+  height: 225px;
+  width: 2px;
+  background-color: rgb(200, 60, 60);
+  transform-origin: bottom;
+  border-radius: 3px;
+  margin: 25px 0 0 250px;
+  z-index: 3;
+}
+
+#nobContainer {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: transparent;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nob {
+  width: 14px;
+  height: 14px;
+  background-color: rgb(18, 47, 212);
+  border-radius: 50%;
+}
+
+#clockNumbers {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-250px);
 }
